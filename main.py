@@ -5,6 +5,8 @@ import time
 def cls():
     os.system("CLS")
 
+print("LETS PLAY ROCK PAPER SCISSOR!")
+print("INSTRUCTIONS:-\nTYPE  -'R' FOR ROCK,\n      -'P' FOR PAPER,\n      -'S' FOR SCISSOR ")
 userscr = 0
 aiscr = 0
 gcnt = 0
@@ -39,7 +41,8 @@ while 1:
         print("IT'S A DRAW")
     elif userchoice == "R":
         if aichoice == "P":
-           print("YOU LOST THIS ROUND!")
+            print(f"\nYOU CHOOSE {userpr_choice}  AND\nAI CHOOSE {aipr_choice}\n")
+            print("YOU LOST THIS ROUND!")
             aiscr += 1
 
         elif aichoice == "S":
@@ -49,11 +52,13 @@ while 1:
 
     elif userchoice == "P":
         if aichoice == "S":
-         
+            print(f"\nYOU CHOOSE {userpr_choice}  AND\nAI CHOOSE {aipr_choice}\n")
+            print("YOU LOST THIS ROUND!")
             aiscr += 1
 
         elif aichoice == "R":
-           
+            print(f"\nYOU CHOOSE {userpr_choice}  AND\nAI CHOOSE {aipr_choice}\n")
+            print("YOU WON THIS ROUND!")
             userscr += 1
 
     elif userchoice == "S":
@@ -63,7 +68,8 @@ while 1:
             aiscr += 1
 
         elif aichoice == "P":
-            
+            print(f"\nYOU CHOOSE {userpr_choice}  AND\nAI CHOOSE {aipr_choice}\n")
+            print("YOU WON THIS ROUND!")
             userscr += 1
     else:
         print("PLEASE ENTER A VALID CHOICE")
@@ -79,3 +85,13 @@ while 1:
 
 print("TOTAL DRAWS = ", 10 - (aiscr + userscr))
 
+print()
+if userscr > aiscr:
+    print("CONGRATULATION !! YOU WON")
+elif userscr == aiscr:
+    print("GAME ENDED IN A DRAW")
+else:
+    print("BETTER LUCK NEXT TIME")
+
+
+exitkey = input("PRESS ENTER TO EXIT\n")
